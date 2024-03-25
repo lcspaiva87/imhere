@@ -30,7 +30,14 @@ export default function Home() {
             setParticipantList(updatedParticipants);
             const jsonValue = JSON.stringify(updatedParticipants);
             await AsyncStorage.setItem('participants', jsonValue);
-            Alert.alert('Participante removido com sucesso');
+            Alert.alert('Remover','Remover participante?',[{
+                text: 'Sim',
+                onPress: () => Alert.alert('Participante removido com sucesso')
+            },{
+                text: 'Não',
+                style: 'cancel'
+                
+            }])
         } catch (error) {
             Alert.alert('Erro ao remover participante');
         }
