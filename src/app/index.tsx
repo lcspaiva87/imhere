@@ -44,6 +44,7 @@ export default function Home() {
             if (value !== null) {
                 setParticipantList(JSON.parse(value));
             }
+           
             setIsLoading(false);
 
         } catch (error) {
